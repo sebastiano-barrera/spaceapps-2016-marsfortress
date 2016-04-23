@@ -36,3 +36,16 @@
        (resource type -> [(quantity : num, reason : string)]).
 
    - At the 'end turn' command, the balance is applied
+
+** Stuff still to do
+
+
+*** DONE Distinguere risorse visibili/invisibili
+*** TODO Assegnare simboli/icone alle risorse
+*** DONE Gli esperimenti aumentano il budget, non lo diminuiscono
+*** TODO Rifornimenti
+    - massimo RESTOCK_MAX_CONTENT_COST di materiale
+**** DONE Aggiungere i costi per fare le ordinazioni
+**** DONE Costo delle risorse ordinate
+**** TODO Distribuzione delle risorse negli edifici
+*** TODO Ogni anno, budget += YEARLY_GRANT

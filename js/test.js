@@ -22,6 +22,7 @@ function listRes() {
     }
 }
 
+game.setLogger(console.log);
 game.setRestock({
     buildings: [
 	new G.Serra({pos: [1,2]}),

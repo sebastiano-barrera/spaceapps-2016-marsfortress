@@ -13,8 +13,8 @@ function assert(cond) {
 
 var INITIAL_BUDGET = 1000000000;
 var YEARLY_GRANT = 1000000;
-var RESTOCK_MAX_CONTENT_COST = 2000000;
-var RESTOCK_COST = 300000000;
+var RESTOCK_MAX_CONTENT_COST = 40000000;
+var RESTOCK_COST = 400000000;
 
 var RESOURCE_TYPES = {};
 
@@ -468,7 +468,7 @@ class Hub extends Building {
         super(_.extend({
             name: "Hub",
             size: [2, 2],
-            cost: 1500000,
+            cost: 15000000,
             descr: "Il posto che permette agli Astronauti di vivere.\n\nUna possibile idea è di realizzare una struttura ricoperta\ndal terreno di Marte per migliorare la coibentazione e per\nmigliorare la protezione dalle radiazioni solari\n[https://en.wikipedia.org/wiki/Mars_habitat]\n[http://www.telegraph.co.uk/technology/picture-galleries/11896687/Top-10-Mars-habitats-from-NASA-space-habitat-challenge.html?frame=3456038]"
         }, args));
 
@@ -512,7 +512,7 @@ class Magazzino extends Building {
     constructor(args) {
         super(_.extend({
             name: "Magazzino",
-            cost: 1000000,
+            cost: 10000000,
             size: [3, 3],
             descr: " Il magazzino permette di immagazzinare le risorse\n(1000000 kWh di Energia, 10000 litri d'acqua, 10000 kg\ndi cibo, 10000 kg di ossigeno, 100000 $ di ricambi)"
         }, args));
@@ -560,7 +560,7 @@ class Officina extends Building {
     constructor(args) {
         super(_.extend({
             name: "Officina",
-            cost: 1000000,
+            cost: 10000000,
             size: [2, 1],
             descr: "The maintenance building allows for repairing various structures and buildings. Its operation requires an astronaut's presence, and allows for a maximum of $10000 of repairs per year"
         }, args));
@@ -575,7 +575,7 @@ class PannelloSolare extends Building {
     constructor(args) {
         super(_.extend({
             name: "Pannello solare",
-            cost: 10000,
+            cost: 100000,
             size: [1, 1],
             descr: "A single solar panel array may produce up to 500 kWh per year. Solar panels sent to Mars are of the highest possible efficieny, and need to resist Mars' sandstorms (laying sand on the panels). Depending on Mars' irradiation, the efficiency may get as high as 120 W/m^2. [http://www.universetoday.com/21293/despite-dust-storms-solar-power-is-best-for-mars-colonies/]"
         }, args));
@@ -590,7 +590,7 @@ class EstrattoreAcqua extends Building {
     constructor(args) {
         super(_.extend({
             name: "Estrattore acqua",
-            cost: 50000,
+            cost: 500000,
             size: [1, 1],
             descr: "A water extractor may extract as many as 100L of water per year. Water on Mars is frozen and mixed with soil. [http://www.astrocupola.it/2013/12/estrarre-lacqua-su-marte/]"
         }, args));
@@ -606,7 +606,7 @@ class RiciclatoreAcqua extends Building {
     constructor(args) {
         super(_.extend({
             name: "Riciclatore acqua",
-            cost: 80000,
+            cost: 800000,
             size: [1, 1],
             descr: "The water recovery system may recycle up to 90% of the total collected water. An identical system is already being used on the ISS, allowing for recovery of water from sweat, urine, and much more. [http://www.focus.it/scienza/spazio/gli-astronauti-nasa-sulla-iss-bevono-urina-riciclata]"
         }, args));
@@ -624,7 +624,7 @@ class Serra extends Building {
         super(_.extend({
             name: "Serra",
             size: [2, 1],
-            cost: 1000000,
+            cost: 10000000,
             descr: "The greenhouse allows for planting and growing almost 1000kg of food for the astronauts, using 500L of water and 1000 kWh of energy. Food production may be optimized by introducing an aquaponic system.[https://it.wikipedia.org/wiki/Idroponica]"
         }, args));
     }
@@ -642,7 +642,7 @@ class Oxygenator extends Building {
     constructor(args) {
         super(_.extend({
             name: "Oxygenator",
-            cost: 50000,
+            cost: 500000,
             size: [1, 1],
             descr: "The oxygenator uses water hydrolysis for producing oxygen. Using 500L of water and 100kWh of energy, it may roughly produce 400kg of oxygen. [https://it.wikipedia.org/wiki/Elettrolisi]"
         }, args));
@@ -659,7 +659,7 @@ class EsperEcopoiesi extends Building {
     constructor(args) {
         super(_.extend({
             name: "Esperimento Ecopoiesi",
-            cost: 1000000,
+            cost: 10000000,
             size: [1, 1],
             descr: "Ecopoiesis is an experiment aiming to analyse the feasability of engineering an ecosystem on a dead planet. [https://www.nasa.gov/content/mars-ecopoiesis-test-bed/#.Vxul4TCLTIU]"
         }, args));
@@ -677,7 +677,7 @@ class EsperTerreno extends Building {
         super(_.extend({
             name: "Studio del terreno",
             size: [1, 1],
-            cost: 500000,
+            cost: 5000000,
             descr: "Soil analysis experiments are required to find out the chemical composition of the martian soil.[http://www.nasa.gov/feature/can-plants-grow-with-mars-soil]"
         }, args));
     }
@@ -693,7 +693,7 @@ class EsperGenerico extends Building {
         super(_.extend({
             name: "Esperimenti tecnologici e scientifici",
             size: [1, 1],
-            cost: 200000,
+            cost: 2000000,
             descr: "Many other experiments may be designed and carried out on Mars: its unique characteristics make it ideal for many different fields. [http://www.nasa.gov/mission_pages/msl/index.html]"
         }, args));
     }

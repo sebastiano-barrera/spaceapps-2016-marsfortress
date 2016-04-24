@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src = 'jquery.min.js'></script>
+    <script src = 'utils.js'></script>
+    <script src = 'background.js'></script>
+    <script src = 'move.js'></script>
+    <script src = 'bundle.js'></script>
+    <script src = 'hud.js'></script>
+    <script src = 'sidebar.js'></script>
+<!--    <script src = 'gen.js'></script> -->
+<!--    <script src = 'scroll.js'></script> --> 
+    <link rel = 'stylesheet' type = 'text/css' href = 'background.css' />
+<style>
+#bar {
+    height: 100%;
+    width: 15%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1000;
+    background: #000;
+    opacity: 0.9;
+    border-left: 5px solid #ccc;
+    filter:alpha(opacity=90);
+    font-family: monospace;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.building_image {
+    float: left;
+    width: 32%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: 1px solid #333;
+}
+
+#end_turn_button {
+    bottom: 0px;
+    width: 100%;
+    height: 24px;
+    background-color: rgb(255,0,0);
+    text-align: center;
+    position: absolute;
+    cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+    <canvas id = 'mars'></canvas>
+
+    <div id = 'img'>
+        <img id = 'mars_bg' src = 'Mars.jpg' />
+
+        <img id='r_acqua' src='images/acqua.png' />
+        <img id='r_astronauti' src='images/astronauti.png' />
+        <img id='r_cibo' src='images/cibo.png' />
+        <img id='r_energia' src='images/energia.png' />
+        <img id='r_ossigeno' src='images/ossigeno.png' />
+        <img id='r_ricambi' src='images/ricambi.png' />
+        <img id='r_soldi' src='images/soldi.png' />
+
+        <img id = 'esperecopoiesi' src = 'buildings/esperecopoiesi.png' />
+        <img id = 'espergenerico' src = 'buildings/espergenerico.png' />
+        <img id = 'esperterreno' src = 'buildings/esperterreno.png' />
+        <img id = 'estrattoreacqua' src = 'buildings/estrattoreacqua.png' />
+        <img id = 'hub' src = 'buildings/hub.png' />
+        <img id = 'magazzino' src = 'buildings/magazzino.png' />
+        <img id = 'officina' src = 'buildings/officina.png' />
+        <img id = 'oxygenator' src = 'buildings/oxygenator.png' />
+        <img id = 'pannellosolare' src = 'buildings/pannellosolare.png' />
+        <img id = 'riciclatoreacqua' src = 'buildings/riciclatoreacqua.png' />
+        <img id = 'serra' src = 'buildings/serra.png' />
+
+            
+
+    </div>
+    <div id = 'bar'>
+        Sciency stuff<br />
+        <div id='barbuildings'></div>
+        <div id='end_turn_button'>End turn</div>
+
+     
+    </div>
+</body>
+</html>

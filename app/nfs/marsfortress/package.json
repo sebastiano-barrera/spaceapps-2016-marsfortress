@@ -1,0 +1,10 @@
+{
+    "name": "marsfortress",
+    "version": "0.0.1",
+    "description": "A strategy game that spreads knowledge about the challenges of Mars colonizations.",
+    "main": "index.js",
+    "scripts": {
+	"test": ""
+    },
+    "license": "BSD"
+}

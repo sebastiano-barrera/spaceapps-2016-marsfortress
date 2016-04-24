@@ -1,0 +1,38 @@
+
+* The resources production/consumption system
+
+  + Each building produces and/or consumes resources at each turn.
+    - Type and quantity may vary from one turn to the next. In other
+      words, it may depend on other factors.
+
+  + Some resources, especially because of their name, may suggest
+    their mere existence consumes/produces other resources. This is
+    never true. Somewhat unintuitively, 'astronauts' don't directly
+    consume or produce anything in our model. It's the Hub/Habitat
+    structure that accounts for the food and water they eat and drink.
+    Similarly, a water recycler both consumes and produces water. The
+    amount of recycled water, however, depends on the actual
+    consumption from astronauts or farms.
+
+    Since we actually DO want astronauts to eat and drink water and
+    water to be recycled, we distinguish between VISIBLE and HIDDEN
+    resources. Visible resources are shown to the user in the UI
+    directly. Hidden resources are only used as a proxy to represent this
+    behavior in the model. For example, astronauts (through the
+    habitat building) consume clean water and food, producing 'waste
+    water'; the water recycler consumes only 'waste water',
+    transforming it back to clean water (losing some fraction of it,
+    of course).
+
+** How it plays out in the code
+   - As soon as the turn begins, we calculate what's the current
+     balance (total gain - total consumption) of each type of
+     resource.
+     - For each structure:
+       - Query its consumption/production of resources
+	 - Each structure declares its request or provision of
+           resource, with a descriptive string
+     - This information is collected in a balance map
+       (resource type -> [(quantity : num, reason : string)]).
+
+   - At the 'end turn' command, the balance is applied

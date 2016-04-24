@@ -58,6 +58,7 @@ class ResourceState {
             qty: qty,
             why: why
 	};
+	console.log(user);
 	this.users.push(user);
     }
 
@@ -66,7 +67,8 @@ class ResourceState {
     }
 
     check(qty) {
-	return (this.qty + qty >= 0);
+	var result = this.qty + qty;
+	return (result >= 0 && result <= this.limit);
     }
 
     endTurn() {
@@ -150,7 +152,6 @@ class Building {
 	}
 
 	for (var i in movements) {
-	    var move = movements[i];
 	    var res = move[0], qty = move[1], why = move[2];
             if (why == null) why = `${this.name} provided ${qty} ${res}`;
 	    game.resources[res].provide(qty, why);
@@ -159,7 +160,7 @@ class Building {
 	return true;
     }
 
-    use(game) {
+    use(game, res, qty, why) {
 	var movements;
 	if (typeof arguments[1] == 'string') {
 	    movements = [[arguments[1], arguments[2], arguments[3]]];
@@ -558,7 +559,7 @@ class Officina extends Building {
             name: "Officina",
             cost: 1000000,
             size: [2, 1],
-            descr: "L'officina permette la riparazione delle varie\nstrutture. Richiede la presenza di astronauti per\nfunzionare, e può gestire al massimo 10000 $ di\nricambi all'anno.  "
+            descr: "The maintenance building allows for repairing various structures and buildings. Its operation requires an astronaut's presence, and allows for a maximum of $10000 of repairs per year"
 	}, args));
     }
 
@@ -574,7 +575,7 @@ class PannelloSolare extends Building {
             name: "Pannello solare",
             cost: 10000,
             size: [1, 1],
-            descr: "Ogni cella genera 500 kWh di energia all'anno. I\npannelli solari prodotti per marte sono ad altissima\nefficienza. devono essere resistenti alle tempeste di\nsabbia di Marte. In base all'irraggiamento di marte\npossono arrivare a produrre fino a 120\nW/m2. [http://www.universetoday.com/21293/despite-dust-storms-solar-power-is-best-for-mars-colonies/]"
+            descr: "A single solar panel array may produce up to 500 kWh per year. Solar panels sent to Mars are of the highest possible efficieny, and need to resist Mars' sandstorms (laying sand on the panels). Depending on Mars' irradiation, the efficiency may get as high as 120 W/m^2. [http://www.universetoday.com/21293/despite-dust-storms-solar-power-is-best-for-mars-colonies/]"
 	}, args));
     }
 
@@ -590,7 +591,7 @@ class EstrattoreAcqua extends Building {
             name: "Estrattore acqua",
             cost: 50000,
             size: [1, 1],
-            descr: "Genera 100 litri d'acqua all'anno. L'acqua su marte è\npresente nel sottosuolo sottoforma di ghiaccio\n[http://www.astrocupola.it/2013/12/estrarre-lacqua-su-marte/]"
+            descr: "A water extractor may extract as many as 100L of water per year. Water on Mars is frozen and mixed with soil. [http://www.astrocupola.it/2013/12/estrarre-lacqua-su-marte/]"
 	}, args));
     }
 
@@ -606,7 +607,7 @@ class RiciclatoreAcqua extends Building {
             name: "Riciclatore acqua",
             cost: 80000,
             size: [1, 1],
-            descr: "Il riciclatore è in grado di riciclare il 90%\ndell'acqua consumata. Sulla ISS sono già presenti\nsistemi di riciclo e recupero dell'acqua sporca e\nurine.\n[http://www.focus.it/scienza/spazio/gli-astronauti-nasa-sulla-iss-bevono-urina-riciclata]"
+            descr: "The water recovery system may recycle up to 90% of the total collected water. An identical system is already being used on the ISS, allowing for recovery of water from sweat, urine, and much more. [http://www.focus.it/scienza/spazio/gli-astronauti-nasa-sulla-iss-bevono-urina-riciclata]"
 	}, args));
     }
 
@@ -623,7 +624,7 @@ class Serra extends Building {
             name: "Serra",
             size: [2, 1],
             cost: 1000000,
-            descr: "La serra permette di coltivare e produre\n1000 kg di cibo consumando 500 litri di acqua e 10000\nkWh di energia all'anno per gli astronauti.\n\nPer ottimizzare la produzione si può sfruttare la\ncoltivazione idroponica.\n[https://it.wikipedia.org/wiki/Idroponica]"
+            descr: "The greenhouse allows for planting and growing almost 1000kg of food for the astronauts, using 500L of water and 1000 kWh of energy. Food production may be optimized by introducing an aquaponic system.[https://it.wikipedia.org/wiki/Idroponica]"
 	}, args));
     }
 
@@ -642,7 +643,7 @@ class Oxygenator extends Building {
 	    name: "Oxygenator",
 	    cost: 50000,
 	    size: [1, 1],
-	    descr: "L'ossigeneratore utilizza l'elettrolisi per produrre\nossigeno partedo da acqua e energia. Per ogni 500\nlitri d'acqua e 100kWh di energia produce 100 kg di\nossigeno.\n[https://it.wikipedia.org/wiki/Elettrolisi]"
+	    descr: "The oxygenator uses water hydrolysis for producing oxygen. Using 500L of water and 100kWh of energy, it may roughly produce 400kg of oxygen. [https://it.wikipedia.org/wiki/Elettrolisi]"
 	}, args));
     }
 
@@ -659,7 +660,7 @@ class EsperEcopoiesi extends Building {
 	    name: "Esperimento Ecopoiesi",
 	    cost: 1000000,
 	    size: [1, 1],
-	    descr: "L'ecopoiesi è un esperimento per valutare la\npossibilità di fabbricare un ecosistema su un pianeta\nsenza vita e sterile.\n[https://www.nasa.gov/content/mars-ecopoiesis-test-bed/#.Vxul4TCLTIU]"
+	    descr: "Ecopoiesis is an experiment aiming to analyse the feasability of engineering an ecosystem on a dead planet. [https://www.nasa.gov/content/mars-ecopoiesis-test-bed/#.Vxul4TCLTIU]"
 	}, args));
     }
 
@@ -676,7 +677,7 @@ class EsperTerreno extends Building {
 	    name: "Studio del terreno",
 	    size: [1, 1],
 	    cost: 500000,
-	    descr: "Gli esperimenti eseguiti servono per studiare la\ncomposizione chimica del terreno di marte.\n[http://www.nasa.gov/feature/can-plants-grow-with-mars-soil]"
+	    descr: "Soil analysis experiments are required to find out the chemical composition of the martian soil.[http://www.nasa.gov/feature/can-plants-grow-with-mars-soil]"
 	}, args));
     }
 
@@ -692,7 +693,7 @@ class EsperGenerico extends Building {
 	    name: "Esperimenti tecnologici e scientifici",
 	    size: [1, 1],
 	    cost: 200000,
-	    descr: "Molti esperimenti hanno bisogno di particolari\ncondizioni di pressione e gravità per essere\neseguiti. Questa struttura sfrutta le condiioni di\nmarte.\n[http://www.nasa.gov/mission_pages/msl/index.html]"
+	    descr: "Many other experiments may be designed and carried out on Mars: its unique characteristics make it ideal for many different fields. [http://www.nasa.gov/mission_pages/msl/index.html]"
 	}, args));
     }
 

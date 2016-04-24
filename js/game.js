@@ -58,6 +58,7 @@ class ResourceState {
             qty: qty,
             why: why
 	};
+	console.log(user);
 	this.users.push(user);
     }
 
@@ -151,7 +152,6 @@ class Building {
 	}
 
 	for (var i in movements) {
-	    var move = movements[i];
 	    var res = move[0], qty = move[1], why = move[2];
             if (why == null) why = `${this.name} provided ${qty} ${res}`;
 	    game.resources[res].provide(qty, why);
@@ -160,7 +160,7 @@ class Building {
 	return true;
     }
 
-    use(game) {
+    use(game, res, qty, why) {
 	var movements;
 	if (typeof arguments[1] == 'string') {
 	    movements = [[arguments[1], arguments[2], arguments[3]]];

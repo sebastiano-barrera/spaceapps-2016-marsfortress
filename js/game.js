@@ -14,7 +14,7 @@ function assert(cond) {
 var INITIAL_BUDGET = 1000000000;
 var YEARLY_GRANT = 1000000;
 var RESTOCK_MAX_CONTENT_COST = 2000000;
-var RESTOCK_COST = 100000000;
+var RESTOCK_COST = 300000000;
 
 var RESOURCE_TYPES = {};
 
@@ -582,7 +582,7 @@ class PannelloSolare extends Building {
     }
 
     declareResources(game) {
-        this.provide(game, 'Energia', 5000);
+        this.provide(game, 'Energia', 1500);
     }
 }
 
@@ -597,8 +597,8 @@ class EstrattoreAcqua extends Building {
     }
 
     declareResources(game) {
-        if (this.use(game, 'Energia', 100))
-            this.provide(game, 'Acqua', 100);
+        if (this.use(game, 'Energia', 250))
+            this.provide(game, 'Acqua', 250);
     }
 }
 

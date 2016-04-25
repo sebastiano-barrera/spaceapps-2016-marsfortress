@@ -193,14 +193,18 @@ function spawnImageRaw (name, x, y, w, h, alpha) {
     logEvent('Starting a new turn');
 }
 
+function logga (msg) {
+    console.log(msg);
+}
+
 
 $(window).load(function() {
 
     game = require('/game');
     g = new game.Game();
 
-    logEvent('passing this function as error handler');
-    g.setLogger(logEvent);
+//    g.setLogger(logEvent);
+    g.setLogger(logga);
     startTurn ();
 
     canvas = document.getElementById('mars');
@@ -247,7 +251,6 @@ $(window).load(function() {
         logEvent('Current turn ended!');
 
         if (buildings.length !== 0) {
-            console.log(buildings);
             g.setRestock({'resources': undefined, 'buildings':buildings});
         }
 

@@ -6,7 +6,7 @@ function populateBuildings () {
         
         var tmp = new game.BUILDING_TYPES[v[k].name]();
         
-        $('#barbuildings').append('<div id = "'+v[k].name+'" class = "building_image" style = "background-image:url(\'buildings/'+v[k].image+'.png\'); height: '+width+'px;" title = "'+tmp.descr+'"/>');
+        $('#barbuildings').append('<div id = "'+v[k].name+'" class = "building_image" style = "background-image:url(\'images/buildings/'+v[k].image+'.png\'); height: '+width+'px;" title = "'+tmp.descr+'"/>');
     }
 
     $('.building_image').click(function() {

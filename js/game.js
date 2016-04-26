@@ -469,7 +469,7 @@ class Hub extends Building {
             name: "Hub",
             size: [2, 2],
             cost: 15000000,
-            descr: "Il posto che permette agli Astronauti di vivere.\n\nUna possibile idea è di realizzare una struttura ricoperta\ndal terreno di Marte per migliorare la coibentazione e per\nmigliorare la protezione dalle radiazioni solari\n[https://en.wikipedia.org/wiki/Mars_habitat]\n[http://www.telegraph.co.uk/technology/picture-galleries/11896687/Top-10-Mars-habitats-from-NASA-space-habitat-challenge.html?frame=3456038]"
+            descr: "Habs are the habitats where the astronauts live and spend most of their time. One of the options is that of building a structure covered in martian soil, in order to increase thermal insulation and shielding from radiation. [http://en.wikipedia.org/wiki/Mars_habitat]\n[http://www.telegraph.co.uk/technology/picture-galleries/11896687/Top-10-Mars-habitats-from-NASA-space-habitat-challenge.html?frame=3456038]"
         }, args));
 
         this.population = 0;
@@ -514,7 +514,7 @@ class Magazzino extends Building {
             name: "Magazzino",
             cost: 10000000,
             size: [3, 3],
-            descr: " Il magazzino permette di immagazzinare le risorse\n(1000000 kWh di Energia, 10000 litri d'acqua, 10000 kg\ndi cibo, 10000 kg di ossigeno, 100000 $ di ricambi)"
+            descr: "The warehouse allows for stocking of res(1000 kWh, 10000L of water, 10000 kg of food, 1000 kg of oxygen, $100000 of spare parts)"
         }, args));
 
         this.storage = {

@@ -5,7 +5,20 @@ var mapToEnglish = {
     'Ossigeno': 'Oxygen',
     'Ricambi': 'Spare parts',
     'Astronauti': 'Astronauts',
-    'Soldi': 'Money'
+    'Soldi': 'Money',
+
+    'Hub': "Hab",
+    'Magazzino': "Warehouse",
+    'Officina': "Workshop",
+    'PannelloSolare': "Solar panel",
+    'EstrattoreAcqua': "Water extractor",
+    'RiciclatoreAcqua': "Water reclaimer",
+    'Serra': "Greenhouse",
+    'Oxygenator': "Oxygenerator",
+    'EsperEcopoiesi': "Mars Ecopoiesis Test Bed Project",
+    'EsperTerreno': "Soil analysis experiment",
+    'EsperGenerico': "Generic experiment",
+
 };
 
 var resCoordinates = {};
@@ -20,7 +33,7 @@ function drawResources() {
         if(k == 'AcquaConsumata')
             continue;
         //if (v.visible === true) {
-            name = mapToEnglish[k];
+            name = mapToEnglish[k] || name;
             fname = k.toLowerCase();
             if(name.length < 12)
                 name = (name + "           ").slice(0,12);

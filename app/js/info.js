@@ -11,8 +11,9 @@ class InfoDialog {
 
     describeBuilding(name) {
 	var tmp = new game.BUILDING_TYPES[name]();
+	var displayName = mapToEnglish[name] || tmp.name;
 	$('#info-dialog').dialog('option', 'title',
-				 'Building: ' + tmp.name);
+				 'Building: ' + displayName);
 	$('#info-dialog-descr').html(tmp.descr);
 	this.open();
     }
@@ -24,8 +25,9 @@ class InfoDialog {
 	    return;
 	}
 
+	var displayName = mapToEnglish[name] || name;
 	$('#info-dialog').dialog('option', 'title',
-				 'Resource: ' + resType.name);
+				 'Resource: ' + displayName);
 	$('#info-dialog-descr').html(resType.descr);
 	this.open();
     }

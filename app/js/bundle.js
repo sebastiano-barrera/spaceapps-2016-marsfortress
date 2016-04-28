@@ -405,7 +405,7 @@ new ResourceType({
     symbol: "",
     visible: true,
     cost: 100,
-    descr: " Risorsa fondamentale per l'alimentazione di qualsiasi struttura. È\npossibile ricavarla attraverso i \"Pannelli solari\".\n\nNonostante le tempeste di sabbia l'energia solare è la soluzione più\nconveniente per marte rispetto al nucleare. L'irraggiamento solare è\ndi circa 500 W/m2, e i panneli solari ne possono convertire in energia\nelettrica fino al 25%\n<div class='source-link'><a href='http://www.universetoday.com/21293/despite-dust-storms-solar-power-is-best-for-mars-colonies/'>Source</a> (universetoday.com)</div>"
+    descr: " Risorsa fondamentale per l'alimentazione di qualsiasi struttura. È\npossibile ricavarla attraverso i \"Pannelli solari\".\n\nNonostante le tempeste di sabbia l'energia solare è la soluzione più\nconveniente per marte rispetto al nucleare. L'irraggiamento solare è\ndi circa 500 W/m2, e i pannelli solari ne possono convertire in energia\nelettrica fino al 25%\n<div class='source-link'><a href='http://www.universetoday.com/21293/despite-dust-storms-solar-power-is-best-for-mars-colonies/'>Source</a> (universetoday.com)</div>"
 });
 
 new ResourceType({
@@ -413,7 +413,7 @@ new ResourceType({
     symbol: "",
     visible: true,
     cost: 100,
-    descr: "Risorsa necessaria per la sopravvivenza di astronauti e per\nl'alimentazione di \"Serre\" e dei \"Generatori di ossigeno\". Può essere\nricavata dall' \"Estrattore dell'acqua\" e dal \"Riciclatore dell'acqua\".\n\nL'acqua è un composto chimico di formula molecolare H2O, in cui i due\natomi di idrogeno sono legati all'atomo di ossigeno con legame\ncovalente polare. In condizioni di temperatura e pressione normali si\npresenta come un sistema bifase – costituito da un liquido incolore e\ninsapore (che viene chiamato \"acqua\" in senso stretto) e da un gas\nincolore (detto vapore acqueo) – ma anche come un solido (detto\nghiaccio) nel caso in cui la temperatura sia uguale o inferiore alla\ntemperatura di congelamento. [Wikipedia -\n<div class='source-link'><a href='https://it.wikipedia.org/wiki/Acqua'>Source</a> (wikipedia.org)</div>"
+    descr: "Risorsa necessaria per la sopravvivenza di astronauti e per\nl'alimentazione di \"Serre\" e dei \"Generatori di ossigeno\". Può essere\nricavata dall' \"Estrattore dell'acqua\" e dal \"Riciclatore dell'acqua\".\n\nL'acqua è un composto chimico di formula molecolare H2O, in cui i due\natomi di idrogeno sono legati all'atomo di ossigeno con legame\ncovalente polare. In condizioni di temperatura e pressione normali si\npresenta come un sistema bifase – costituito da un liquido incolore e\ninsapore (che viene chiamato \"acqua\" in senso stretto) e da un gas\nincolore (detto vapore acqueo) – ma anche come un solido (detto\nghiaccio) nel caso in cui la temperatura sia uguale o inferiore alla\ntemperatura di congelamento. \n<div class='source-link'><a href='https://it.wikipedia.org/wiki/Acqua'>Source</a> (wikipedia.org)</div>"
 });
 
 new ResourceType({

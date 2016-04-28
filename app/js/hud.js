@@ -8,6 +8,8 @@ var mapToEnglish = {
     'Soldi': 'Money'
 };
 
+var resCoordinates = {};
+
 function drawResources() {
     i = 20;
     ctx.font = "15px Monospace";
@@ -24,8 +26,18 @@ function drawResources() {
                 name = (name + "           ").slice(0,12);
             spawnImageRaw("r_" + fname, 15, 2 + i, 24, 24, 1);
             ctx.fillText(name + ": " + v.qty,50,20 + i);
+
+	if (resCoordinates[k] === undefined) {
+	    resCoordinates[k] = {
+		x: 15, y: 2+i,
+		width: 300, height: 24,
+	    };
+	}
+
+
             i += 30;
         //}
+
     };
 }
 
@@ -44,7 +56,7 @@ function drawLogger() {
     ctx.fillText('------- EVENTS -------',10,i-20);
     for(l in log) {
         ctx.fillText(log[l],20,i);
-        i += 20; 
+        i += 20;
     }
 }
 

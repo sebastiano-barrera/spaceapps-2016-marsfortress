@@ -404,7 +404,7 @@ new ResourceType({
     symbol: "",
     visible: true,
     cost: 100,
-    descr: " Risorsa fondamentale per l'alimentazione di qualsiasi struttura. È\npossibile ricavarla attraverso i \"Pannelli solari\".\n\nNonostante le tempeste di sabbia l'energia solare è la soluzione più\nconveniente per marte rispetto al nucleare. L'irraggiamento solare è\ndi circa 500 W/m2, e i panneli solari ne possono convertire in energia\nelettrica fino al 25%\n<a href='http://www.universetoday.com/21293/despite-dust-storms-solar-power-is-best-for-mars-colonies/'>Source</a>"
+    descr: " Risorsa fondamentale per l'alimentazione di qualsiasi struttura. È\npossibile ricavarla attraverso i \"Pannelli solari\".\n\nNonostante le tempeste di sabbia l'energia solare è la soluzione più\nconveniente per marte rispetto al nucleare. L'irraggiamento solare è\ndi circa 500 W/m2, e i panneli solari ne possono convertire in energia\nelettrica fino al 25%\n<div class='source-link'><a href='http://www.universetoday.com/21293/despite-dust-storms-solar-power-is-best-for-mars-colonies/'>Source</a> (universetoday.com)</div>"
 });
 
 new ResourceType({
@@ -412,7 +412,7 @@ new ResourceType({
     symbol: "",
     visible: true,
     cost: 100,
-    descr: "Risorsa necessaria per la sopravvivenza di astronauti e per\nl'alimentazione di \"Serre\" e dei \"Generatori di ossigeno\". Può essere\nricavata dall' \"Estrattore dell'acqua\" e dal \"Riciclatore dell'acqua\".\n\nL'acqua è un composto chimico di formula molecolare H2O, in cui i due\natomi di idrogeno sono legati all'atomo di ossigeno con legame\ncovalente polare. In condizioni di temperatura e pressione normali si\npresenta come un sistema bifase – costituito da un liquido incolore e\ninsapore (che viene chiamato \"acqua\" in senso stretto) e da un gas\nincolore (detto vapore acqueo) – ma anche come un solido (detto\nghiaccio) nel caso in cui la temperatura sia uguale o inferiore alla\ntemperatura di congelamento. [Wikipedia -\nhttps://it.wikipedia.org/wiki/Acqua]"
+    descr: "Risorsa necessaria per la sopravvivenza di astronauti e per\nl'alimentazione di \"Serre\" e dei \"Generatori di ossigeno\". Può essere\nricavata dall' \"Estrattore dell'acqua\" e dal \"Riciclatore dell'acqua\".\n\nL'acqua è un composto chimico di formula molecolare H2O, in cui i due\natomi di idrogeno sono legati all'atomo di ossigeno con legame\ncovalente polare. In condizioni di temperatura e pressione normali si\npresenta come un sistema bifase – costituito da un liquido incolore e\ninsapore (che viene chiamato \"acqua\" in senso stretto) e da un gas\nincolore (detto vapore acqueo) – ma anche come un solido (detto\nghiaccio) nel caso in cui la temperatura sia uguale o inferiore alla\ntemperatura di congelamento. [Wikipedia -\n<div class='source-link'><a href='https://it.wikipedia.org/wiki/Acqua'>Source</a> (wikipedia.org)</div>"
 });
 
 new ResourceType({
@@ -420,7 +420,7 @@ new ResourceType({
     symbol: "",
     visible: true,
     cost: 100,
-    descr: "Risorsa importantissima per permettere la sopravvivenza degli\nastronauti.\n\nLa produzione di cibo localmente è necessaria per una possibile\ncolonizzazione del pianeta, e per rendere gli astronauti più\nindipendenti dalla terra\n<a href='http://www.mars-one.com/faq/health-and-ethics/will-the-astronauts-have-enough-water-food-and-oxygen'>Source</a>"
+    descr: "Risorsa importantissima per permettere la sopravvivenza degli\nastronauti.\n\nLa produzione di cibo localmente è necessaria per una possibile\ncolonizzazione del pianeta, e per rendere gli astronauti più\nindipendenti dalla terra\n<div class='source-link'><a href='http://www.mars-one.com/faq/health-and-ethics/will-the-astronauts-have-enough-water-food-and-oxygen'>Source</a> (mars-one.com)</div>"
 });
 
 new ResourceType({
@@ -428,7 +428,7 @@ new ResourceType({
     symbol: "",
     visible: true,
     cost: 100,
-    descr: "Risorsa necessaria la sopravvivenza degli astronauti. L'ossigeno può\nessere prodotto separando l'acqua nelle sue componenti attraverso\nl'elettrolisi.\n\nThe oxygen will be used to provide a breathable atmosphere in the\nliving units, and a portion will be stored in reserve for conditions\nwhen there is less power available, for example at night, and during\ndust storms. The second major component of the living units'\natmosphere, nitrogen, will be extracted directly from the Martian\natmosphere by the life support\nunit. <a href='http://www.mars-one.com/faq/health-and-ethics/will-the-astronauts-have-enough-water-food-and-oxygen'>Source</a> "
+    descr: "Risorsa necessaria la sopravvivenza degli astronauti. L'ossigeno può\nessere prodotto separando l'acqua nelle sue componenti attraverso\nl'elettrolisi.\n\nThe oxygen will be used to provide a breathable atmosphere in the\nliving units, and a portion will be stored in reserve for conditions\nwhen there is less power available, for example at night, and during\ndust storms. The second major component of the living units'\natmosphere, nitrogen, will be extracted directly from the Martian\natmosphere by the life support\nunit. <div class='source-link'><a href='http://www.mars-one.com/faq/health-and-ethics/will-the-astronauts-have-enough-water-food-and-oxygen'>Source</a> (mars-one.com)</div> "
 });
 
 new ResourceType({
@@ -469,7 +469,7 @@ class Hub extends Building {
             name: "Hub",
             size: [2, 2],
             cost: 15000000,
-            descr: "Habs are the habitats where the astronauts live and spend most of their time. One of the options is that of building a structure covered in martian soil, in order to increase thermal insulation and shielding from radiation. <a href='http://en.wikipedia.org/wiki/Mars_habitat'>Source</a>\n<a href='http://www.telegraph.co.uk/technology/picture-galleries/11896687/Top-10-Mars-habitats-from-NASA-space-habitat-challenge.html?frame=3456038'>Source</a>"
+            descr: "Habs are the habitats where the astronauts live and spend most of their time. One of the options is that of building a structure covered in martian soil, in order to increase thermal insulation and shielding from radiation. <div class='source-link'><a href='http://en.wikipedia.org/wiki/Mars_habitat'>Source</a> (wikipedia.org)</div>\n<div class='source-link'><a href='http://www.telegraph.co.uk/technology/picture-galleries/11896687/Top-10-Mars-habitats-from-NASA-space-habitat-challenge.html?frame=3456038'>Source</a> (telegraph.co.uk)</div>"
         }, args));
 
         this.population = 0;
@@ -577,7 +577,7 @@ class PannelloSolare extends Building {
             name: "Pannello solare",
             cost: 100000,
             size: [1, 1],
-            descr: "A single solar panel array may produce up to 500 kWh per year. Solar panels sent to Mars are of the highest possible efficieny, and need to resist Mars' sandstorms (laying sand on the panels). Depending on Mars' irradiation, the efficiency may get as high as 120 W/m^2. <a href='http://www.universetoday.com/21293/despite-dust-storms-solar-power-is-best-for-mars-colonies/'>Source</a>"
+            descr: "A single solar panel array may produce up to 500 kWh per year. Solar panels sent to Mars are of the highest possible efficieny, and need to resist Mars' sandstorms (laying sand on the panels). Depending on Mars' irradiation, the efficiency may get as high as 120 W/m^2. <div class='source-link'><a href='http://www.universetoday.com/21293/despite-dust-storms-solar-power-is-best-for-mars-colonies/'>Source</a> (universetoday.com)</div>"
         }, args));
     }
 
@@ -592,7 +592,7 @@ class EstrattoreAcqua extends Building {
             name: "Estrattore acqua",
             cost: 500000,
             size: [1, 1],
-            descr: "A water extractor may extract as many as 100L of water per year. Water on Mars is frozen and mixed with soil. <a href='http://www.astrocupola.it/2013/12/estrarre-lacqua-su-marte/'>Source</a>"
+            descr: "A water extractor may extract as many as 100L of water per year. Water on Mars is frozen and mixed with soil. <div class='source-link'><a href='http://www.astrocupola.it/2013/12/estrarre-lacqua-su-marte/'>Source</a> (astrocupola.it)</div>"
         }, args));
     }
 
@@ -608,7 +608,7 @@ class RiciclatoreAcqua extends Building {
             name: "Riciclatore acqua",
             cost: 800000,
             size: [1, 1],
-            descr: "The water recovery system may recycle up to 90% of the total collected water. An identical system is already being used on the ISS, allowing for recovery of water from sweat, urine, and much more. <a href='http://www.focus.it/scienza/spazio/gli-astronauti-nasa-sulla-iss-bevono-urina-riciclata'>Source</a>"
+            descr: "The water recovery system may recycle up to 90% of the total collected water. An identical system is already being used on the ISS, allowing for recovery of water from sweat, urine, and much more. <div class='source-link'><a href='http://www.focus.it/scienza/spazio/gli-astronauti-nasa-sulla-iss-bevono-urina-riciclata'>Source</a> (focus.it)</div>"
         }, args));
     }
 
@@ -625,7 +625,7 @@ class Serra extends Building {
             name: "Serra",
             size: [2, 1],
             cost: 10000000,
-            descr: "The greenhouse allows for planting and growing almost 1000kg of food for the astronauts, using 500L of water and 1000 kWh of energy. Food production may be optimized by introducing an aquaponic system.<a href='https://it.wikipedia.org/wiki/Idroponica'>Source</a>"
+            descr: "The greenhouse allows for planting and growing almost 1000kg of food for the astronauts, using 500L of water and 1000 kWh of energy. Food production may be optimized by introducing an aquaponic system.<div class='source-link'><a href='https://it.wikipedia.org/wiki/Idroponica'>Source</a> (wikipedia.org)</div>"
         }, args));
     }
 
@@ -644,7 +644,7 @@ class Oxygenator extends Building {
             name: "Oxygenator",
             cost: 500000,
             size: [1, 1],
-            descr: "The oxygenator uses water hydrolysis for producing oxygen. Using 500L of water and 100kWh of energy, it may roughly produce 400kg of oxygen. <a href='https://it.wikipedia.org/wiki/Elettrolisi'>Source</a>"
+            descr: "The oxygenator uses water hydrolysis for producing oxygen. Using 500L of water and 100kWh of energy, it may roughly produce 400kg of oxygen. <div class='source-link'><a href='https://it.wikipedia.org/wiki/Elettrolisi'>Source</a> (wikipedia.org)</div>"
         }, args));
     }
 
@@ -661,7 +661,7 @@ class EsperEcopoiesi extends Building {
             name: "Esperimento Ecopoiesi",
             cost: 10000000,
             size: [1, 1],
-            descr: "Ecopoiesis is an experiment aiming to analyse the feasability of engineering an ecosystem on a dead planet. <a href='https://www.nasa.gov/content/mars-ecopoiesis-test-bed/#.Vxul4TCLTIU'>Source</a>"
+            descr: "Ecopoiesis is an experiment aiming to analyse the feasability of engineering an ecosystem on a dead planet. <div class='source-link'><a href='https://www.nasa.gov/content/mars-ecopoiesis-test-bed/#.Vxul4TCLTIU'>Source</a> (nasa.gov)</div>"
         }, args));
     }
 
@@ -678,7 +678,7 @@ class EsperTerreno extends Building {
             name: "Studio del terreno",
             size: [1, 1],
             cost: 5000000,
-            descr: "Soil analysis experiments are required to find out the chemical composition of the martian soil.<a href='http://www.nasa.gov/feature/can-plants-grow-with-mars-soil'>Source</a>"
+            descr: "Soil analysis experiments are required to find out the chemical composition of the martian soil.<div class='source-link'><a href='http://www.nasa.gov/feature/can-plants-grow-with-mars-soil'>Source</a> (nasa.gov)</div>"
         }, args));
     }
 
@@ -694,7 +694,7 @@ class EsperGenerico extends Building {
             name: "Esperimenti tecnologici e scientifici",
             size: [1, 1],
             cost: 2000000,
-            descr: "Many other experiments may be designed and carried out on Mars: its unique characteristics make it ideal for many different fields. <a href='http://www.nasa.gov/mission_pages/msl/index.html'>Source</a>"
+            descr: "Many other experiments may be designed and carried out on Mars: its unique characteristics make it ideal for many different fields. <div class='source-link'><a href='http://www.nasa.gov/mission_pages/msl/index.html'>Source</a> (nasa.gov)</div>"
         }, args));
     }
 

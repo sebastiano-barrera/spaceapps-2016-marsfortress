@@ -226,7 +226,7 @@ $(window).load(function() {
     });
 
     $('#mars').mouseup(function() {
-        if (highlight.enable === true && typeof highlight.drop === 'function' && canPlaceBuilding(highlight.x, highlight.y, highlight.size.x, highlight.size.y) && scrolled < 0.005) {
+	if (highlight.enable === true && typeof highlight.drop === 'function' && canPlaceBuilding(highlight.x, highlight.y, highlight.size.x, highlight.size.y) && scrolled < 0.005) {
             highlight.drop();
 
             loadImage(highlight.id.toLowerCase(),highlight.x,highlight.y,highlight.size.x,highlight.size.y,.7);
@@ -243,6 +243,22 @@ $(window).load(function() {
             highlight.enable = false;
             $('.building_image').removeClass('selected');
         }
+    });
+
+    $('#mars').contextmenu(function(event) {
+	event.preventDefault();
+
+	var x = event.pageX, y = event.pageY;
+
+	// resCoordinates is from hud.js
+	for(var name in resCoordinates) {
+	    var coords = resCoordinates[name];
+	    if (coords.x <= x && x < coords.x+coords.width
+	       && coords.y <= y && y < coords.y+coords.height) {
+		infoDialog.describeResource(name);
+		break;
+	    }
+	}
     });
 
     $('#end_turn_button').click(function () {

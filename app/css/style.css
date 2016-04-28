@@ -81,7 +81,9 @@ html, body {
 
 }
 
-.ui-dialog a {
+.ui-dialog .source-link {
 	display: block;
+}
+.ui-dialog .source-link, .ui-dialog .source-link a {
 	color: white;
 }

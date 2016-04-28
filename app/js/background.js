@@ -245,8 +245,6 @@ $(window).load(function() {
         }
     });
 
-
-
     $('#end_turn_button').click(function () {
         logEvent('Current turn ended!');
 

@@ -8,39 +8,49 @@
         <script src = 'js/bundle.js'></script>
         <script src = 'js/hud.js'></script>
         <script src = 'js/sidebar.js'></script>
+        <script src = 'js/info.js'></script>
+	<script src="js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+        <link rel = 'stylesheet' type = 'text/css' href = 'js/jquery-ui-1.11.4.custom/jquery-ui.css' />
         <link rel = 'stylesheet' type = 'text/css' href = 'css/style.css' />
     </head>
 
     <body>
-        <canvas id = 'mars'></canvas>
+            <canvas id = 'mars'></canvas>
 
-        <div id = 'img'>
-            <img id = 'mars_bg' src = 'images/mars.jpg' />
+            <div id = 'img'>
+		    <img id = 'mars_bg' src = 'images/mars.jpg' />
 
-            <img id='r_acqua' src='images/acqua.png' />
-            <img id='r_astronauti' src='images/astronauti.png' />
-            <img id='r_cibo' src='images/cibo.png' />
-            <img id='r_energia' src='images/energia.png' />
-            <img id='r_ossigeno' src='images/ossigeno.png' />
-            <img id='r_ricambi' src='images/ricambi.png' />
-            <img id='r_soldi' src='images/soldi.png' />
+		    <img id='r_acqua' src='images/acqua.png' />
+		    <img id='r_astronauti' src='images/astronauti.png' />
+		    <img id='r_cibo' src='images/cibo.png' />
+		    <img id='r_energia' src='images/energia.png' />
+		    <img id='r_ossigeno' src='images/ossigeno.png' />
+		    <img id='r_ricambi' src='images/ricambi.png' />
+		    <img id='r_soldi' src='images/soldi.png' />
 
-            <img id = 'esperecopoiesi' src = 'images/buildings/esperecopoiesi.png' />
-            <img id = 'espergenerico' src = 'images/buildings/espergenerico.png' />
-            <img id = 'esperterreno' src = 'images/buildings/esperterreno.png' />
-            <img id = 'estrattoreacqua' src = 'images/buildings/estrattoreacqua.png' />
-            <img id = 'hub' src = 'images/buildings/hub.png' />
-            <img id = 'magazzino' src = 'images/buildings/magazzino.png' />
-            <img id = 'officina' src = 'images/buildings/officina.png' />
-            <img id = 'oxygenator' src = 'images/buildings/oxygenator.png' />
-            <img id = 'pannellosolare' src = 'images/buildings/pannellosolare.png' />
-            <img id = 'riciclatoreacqua' src = 'images/buildings/riciclatoreacqua.png' />
-            <img id = 'serra' src = 'images/buildings/serra.png' />
-        </div>
-        <div id = 'bar'>
-            Sciency stuff<br />
-            <div id='barbuildings'></div>
-            <div id='end_turn_button'>End turn</div>
-        </div>
+		    <img id = 'esperecopoiesi' src = 'images/buildings/esperecopoiesi.png' />
+		    <img id = 'espergenerico' src = 'images/buildings/espergenerico.png' />
+		    <img id = 'esperterreno' src = 'images/buildings/esperterreno.png' />
+		    <img id = 'estrattoreacqua' src = 'images/buildings/estrattoreacqua.png' />
+		    <img id = 'hub' src = 'images/buildings/hub.png' />
+		    <img id = 'magazzino' src = 'images/buildings/magazzino.png' />
+		    <img id = 'officina' src = 'images/buildings/officina.png' />
+		    <img id = 'oxygenator' src = 'images/buildings/oxygenator.png' />
+		    <img id = 'pannellosolare' src = 'images/buildings/pannellosolare.png' />
+		    <img id = 'riciclatoreacqua' src = 'images/buildings/riciclatoreacqua.png' />
+		    <img id = 'serra' src = 'images/buildings/serra.png' />
+            </div>
+
+            <div id = 'bar'>
+		    Sciency stuff<br />
+		    <div id='barbuildings'></div>
+		    <div id='end_turn_button'>End turn</div>
+            </div>
+
+	    <div id="info-dialog" title="Marsopedia">
+		    <div id="info-dialog-descr">
+			Lorem ipsum dolor sit amet
+		</div>
+	</div>
     </body>
 </html>
